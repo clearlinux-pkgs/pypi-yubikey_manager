@@ -7,7 +7,7 @@
 #
 Name     : pypi-yubikey_manager
 Version  : 5.5.1
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/b5/50/9b446ca65124bbd7bc0e74304cda737248a6bceb602e5dba957114ab64df/yubikey_manager-5.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b5/50/9b446ca65124bbd7bc0e74304cda737248a6bceb602e5dba957114ab64df/yubikey_manager-5.5.1.tar.gz
 Summary  : Tool for managing your YubiKey configuration.
