@@ -1,2 +1,3 @@
-pypi(pyscard)
 pypi(fido2)
+pypi(keyring)
+pypi(pyscard)
