@@ -1,0 +1,26 @@
+From 16fcd981e356fd1c4fcb86553cde397cb0a40881 Mon Sep 17 00:00:00 2001
+From: "Brett T. Warden" <brett.t.warden@intel.com>
+Date: Thu, 22 May 2025 16:52:08 -0700
+Subject: [PATCH] Remove upper pin on fido2 version
+
+See https://github.com/Yubico/yubikey-manager/issues/670
+---
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 3887895..e33970a 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -18,7 +18,7 @@ classifiers = [
+ dependencies = [
+   "cryptography (>=3.0, <47)",
+   "pyscard (>=2.0, <3)",
+-  "fido2 (>=1.0, <=2.0.0b1)",
++  "fido2 (>=1.0)",
+   "click (>=8.0, <9)",
+   "keyring (>=23.4, <26)",
+   "pywin32 (>=223) ; sys_platform == 'win32'",
+-- 
+2.49.0
+
