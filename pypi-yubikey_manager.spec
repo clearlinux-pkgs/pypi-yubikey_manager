@@ -6,10 +6,10 @@
 # autospec commit: 99a7985
 #
 Name     : pypi-yubikey_manager
-Version  : 5.6.1
-Release  : 5
-URL      : https://files.pythonhosted.org/packages/a5/27/f0ab65a7a0204714df832dc16d3ce79777f76985d7c7fc96657ec32e061f/yubikey_manager-5.6.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/a5/27/f0ab65a7a0204714df832dc16d3ce79777f76985d7c7fc96657ec32e061f/yubikey_manager-5.6.1.tar.gz
+Version  : 5.7.0
+Release  : 6
+URL      : https://files.pythonhosted.org/packages/d1/e2/7037a16f72d10939384744366f3797cc3052fc726a7bd001f9ed28bfe1c9/yubikey_manager-5.7.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/d1/e2/7037a16f72d10939384744366f3797cc3052fc726a7bd001f9ed28bfe1c9/yubikey_manager-5.7.0.tar.gz
 Summary  : Library and CLI for managing your YubiKey configuration.
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -22,7 +22,6 @@ BuildRequires : pypi(poetry_core)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
-Patch1: backport-Remove-upper-pin-on-fido2-version.patch
 
 %description
 == YubiKey Manager CLI
@@ -73,16 +72,15 @@ python3 components for the pypi-yubikey_manager package.
 
 
 %prep
-%setup -q -n yubikey_manager-5.6.1
-cd %{_builddir}/yubikey_manager-5.6.1
-%patch -P 1 -p1
+%setup -q -n yubikey_manager-5.7.0
+cd %{_builddir}/yubikey_manager-5.7.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1747958116
+export SOURCE_DATE_EPOCH=1748458479
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
